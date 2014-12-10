@@ -1,28 +1,17 @@
-== README
+= EJEMPLO DE LOGIN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== Informacion
 
-Things you may want to cover:
+En Este Ejemplo se trabajo el manejo de login de usuario sin el uso de base de datos.
 
 * Ruby version
+ <tt>Ruby 2.0.0 </tt>
 
-* System dependencies
+* Rails Version
+<tt> Rails 4.1.4 </tt>
 
-* Configuration
+==Notas
 
-* Database creation
+Este ejemplo es basico y esta casi del todo documentado cualquier error que puedas encontrar porfavor reportalo. 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Gracias.
