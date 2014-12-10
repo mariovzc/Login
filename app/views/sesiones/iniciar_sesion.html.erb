@@ -1,15 +1,40 @@
-<h2> Iniciar sesión </h2>
-<%= form_tag({:controller => "sesiones", :action => "iniciar_sesion"}, :method => "post") do %>
-   <%= label_tag "nombre_usuario", "Nombre de usuario" %>
+<div class="container" >
+
+<div class="col-lg-3"></div>
+
+  <div class="col-lg-6" id="formulario">
+<h2 > Iniciar sesión </h2>
+<br />
+<%= form_tag({:controller => "sesiones", :action => "iniciar_sesion" },:class =>'form-horizontal', :method => "post") do %>
+ 	 <div class="form-inputs">
+   <%= label_tag "nombre_usuario", "Nombre de usuario"%>
    <br />
-   <%= text_field_tag "nombre_usuario", "", :required => "required" %>
+   <%= text_field_tag "nombre_usuario", "", :required => "required",:class=>"form-control" %>
+   <br/>
+   <%= label_tag "contrasena", "Contraseña"%>
    <br />
-   <%= label_tag "contrasena", "Contraseña" %>
-   <br />
-   <%= password_field_tag "contrasena", "", :required => "required" %>
-   <br />
-   <%= submit_tag "Ingresar" %>
+   <%= password_field_tag "contrasena", "", :required => "required" ,:class=>"form-control"%>
+   <br /> <br/>
+   </div>
+
+   <div class="form-actions">
+   <%= submit_tag "Ingresar" , :class =>"btn btn-default" %>
+   </div>  </br>
 <% end %>
+
+
 <% if @error_login %>
- <div style="color: #f00;"> El nombre de usuario o la contraseña son incorrectos. </div>
+</br>
+<div class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  <strong> El nombre de usuario o la contraseña son incorrectos.
+</div>
+
+
+
+ <div style="color: #f00;"> </div>
 <% end %>
+
+</div>
+	<div class="col-lg-3"></div>
+</div>
