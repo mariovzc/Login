@@ -5,10 +5,10 @@
 En Este Ejemplo se trabajo el manejo de login de usuario sin el uso de base de datos.
 
 * Ruby version
- <tt>Ruby 2.0.0 </tt>
+ Ruby 2.0.0 
 
 * Rails Version
-<tt> Rails 4.1.4 </tt>
+ Rails 4.1.4 
 
 ==Notas
 
