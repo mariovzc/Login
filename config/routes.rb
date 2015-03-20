@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   
   get 'sesiones/iniciar_sesion'
-  post 'sesiones/iniciar_sesion'
+  post 'sesiones/iniciar_sesion' => 'sesiones#iniciar_sesion_post', as: 'iniciar_sesion_post'
 
   get 'sesiones/cerrar_sesion'
-  post 'sesiones/cerrar_sesion'
-
+  
   get 'sesiones/index'
 
   

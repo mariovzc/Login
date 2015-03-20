@@ -5,7 +5,7 @@
   <div class="col-lg-6" id="formulario">
 <h2 > Iniciar sesión </h2>
 <br />
-<%= form_tag({:controller => "sesiones", :action => "iniciar_sesion" },:class =>'form-horizontal', :method => "post") do %>
+<%= form_tag(url: iniciar_sesion_post_path, class: 'form-horizontal', method: "post") do %>
  	 <div class="form-inputs">
    <%= label_tag "nombre_usuario", "Nombre de usuario"%>
    <br />

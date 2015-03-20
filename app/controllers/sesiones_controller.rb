@@ -1,21 +1,30 @@
 class SesionesController < ApplicationController
   def iniciar_sesion
-	@error_login = false
-   #Verifica si se ha enviado el formulario.
-   if request.post?
-      #Verifica si el nombre de usuario y la contraseña son correctos.
-      if login(params[:nombre_usuario], params[:contrasena])
-         #Los datos son correctos así que redirecciona al index.
-         redirect_to :controller => "sesiones", :action => "index"
-      else
-         #Los datos son incorrectos así que setea la variable @error_login a true para mostrar el error por pantalla.
-         @error_login = true
-      end
-   	end
+	  @error_login = false
+        
+    #Verifica si el nombre de usuario y la contraseña son correctos.
+    if login(params[:nombre_usuario], params[:contrasena])
+       #Los datos son correctos así que redirecciona al index.
+       redirect_to :controller => "sesiones", :action => "index"
+    else
+       #Los datos son incorrectos así que setea la variable @error_login a true para mostrar el error por pantalla.
+       @error_login = true
+    end
+  end
+
+  def iniciar_sesion_post
+    #Verifica si el nombre de usuario y la contraseña son correctos.
+    if login(params[:nombre_usuario], params[:contrasena])
+       #Los datos son correctos así que redirecciona al index.
+       redirect_to :controller => "sesiones", :action => "index"
+    else
+       #Los datos son incorrectos así que setea la variable @error_login a true para mostrar el error por pantalla.
+       @error_login = true
+    end
   end
 
   def cerrar_sesion
-  	@sesion = get_login()
+   @sesion = get_login()
    if @sesion
    		#Cierra session definitivamente
       reset_session
